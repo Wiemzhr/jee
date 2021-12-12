@@ -3,14 +3,15 @@ package tn.esb.bis.universityMgt_API.Entities;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
 @Data
-@NoArgsConstructor
 @Entity
+@NoArgsConstructor
 public class Group {
     @Id
     @GeneratedValue
@@ -18,7 +19,7 @@ public class Group {
     @NonNull
     private String name;
     @NonNull
-    private int capacity;
+    private Integer capacity;
     private String description;
     @ManyToMany
     // La création de la table association avec @JoinTable est valable uniquement lorsque
